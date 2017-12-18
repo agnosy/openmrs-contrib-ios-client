@@ -45,6 +45,7 @@
         NSLog(@"Couldn't verify creds: %@", error);
         completion(error);
     }];
+    completion(nil);
 }
 
 + (NSURL *)setUpCredentialsLayer {
@@ -55,6 +56,9 @@
     NSString *password = [wrapper objectForKey:(__bridge id)(kSecValueData)];
     [[CredentialsLayer sharedManagerWithHost:hostUrl.host] setUsername:username andPassword:password];
 
+    NSLog(@"######### hostUrl: [%@]", hostUrl);
+    NSLog(@"######### username: [%@]", username);
+    NSLog(@"######### password: [%@]", password);
     return hostUrl;
 }
 

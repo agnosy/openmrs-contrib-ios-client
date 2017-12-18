@@ -39,7 +39,8 @@
 		24C1E0E31B793AF2003A13A9 /* record_plain.png in Resources */ = {isa = PBXBuildFile; fileRef = 24C1E0E21B793AF2003A13A9 /* record_plain.png */; };
 		24D127511B0DF6140018AA1D /* MRSDateUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D127501B0DF6140018AA1D /* MRSDateUtilities.m */; };
 		24DAC0D71B397F680089AD12 /* MRSVisitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DAC0D61B397F680089AD12 /* MRSVisitCell.m */; };
-		65BE2B3E2C5F8BE1FB7090C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CFC2F5FC6F1445E8327AF6 /* libPods.a */; };
+		4174AE2BE8FBC50324B37910 /* libPods-OpenMRS-iOS-OpenMRS-iOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2734B0B65E9C342F9A66D272 /* libPods-OpenMRS-iOS-OpenMRS-iOSTests.a */; };
+		CC9BBCC6FF8B5F345A003726 /* libPods-OpenMRS-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8942327AC6D369708D6965AA /* libPods-OpenMRS-iOS.a */; };
 		D317E7F61A4C6BD300E05212 /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = D317E7F41A4C6BD300E05212 /* OrderedDictionary.m */; };
 		D33DCC6A1CCDA735008C5AE0 /* EncounterViewController Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33DCC691CCDA735008C5AE0 /* EncounterViewController Storyboard.storyboard */; };
 		D33DCC6C1CCDA77D008C5AE0 /* EncounterObCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33DCC6B1CCDA77D008C5AE0 /* EncounterObCell.swift */; };
@@ -100,6 +101,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		038921AB29467A8F73391717 /* Pods-OpenMRS-iOS-OpenMRS-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenMRS-iOS-OpenMRS-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenMRS-iOS-OpenMRS-iOSTests/Pods-OpenMRS-iOS-OpenMRS-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		240F4EE11B5BB22900E943FC /* XFormsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFormsList.h; sourceTree = "<group>"; };
 		240F4EE21B5BB22900E943FC /* XFormsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = XFormsList.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		240F4EE51B5BB31600E943FC /* XForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XForms.h; sourceTree = "<group>"; };
@@ -162,9 +164,15 @@
 		24D127501B0DF6140018AA1D /* MRSDateUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRSDateUtilities.m; sourceTree = "<group>"; };
 		24DAC0D51B397F680089AD12 /* MRSVisitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRSVisitCell.h; sourceTree = "<group>"; };
 		24DAC0D61B397F680089AD12 /* MRSVisitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRSVisitCell.m; sourceTree = "<group>"; };
+		2734B0B65E9C342F9A66D272 /* libPods-OpenMRS-iOS-OpenMRS-iOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OpenMRS-iOS-OpenMRS-iOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DABD9AC0AF325FC34EE4F64 /* Pods-OpenMRS-iOS-OpenMRS-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenMRS-iOS-OpenMRS-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenMRS-iOS-OpenMRS-iOSTests/Pods-OpenMRS-iOS-OpenMRS-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A299C13C49FCBC0FC665623 /* libPods-OpenMRS-iOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OpenMRS-iOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB34D97199C17C085EAFAEE /* Pods-OpenMRS-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenMRS-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenMRS-iOS/Pods-OpenMRS-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6ADAFB11AB51B0E4D4DF142D /* Pods-OpenMRS-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenMRS-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenMRS-iOS/Pods-OpenMRS-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		87CFC2F5FC6F1445E8327AF6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFA25E06F401CA7D732F7C67 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		D21FB0B4A47906E6EF7F24EA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8942327AC6D369708D6965AA /* libPods-OpenMRS-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OpenMRS-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFA25E06F401CA7D732F7C67 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods-OpenMRS-iOS/Pods-OpenMRS-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D21FB0B4A47906E6EF7F24EA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods-OpenMRS-iOS/Pods-OpenMRS-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D317E7F41A4C6BD300E05212 /* OrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderedDictionary.m; sourceTree = "<group>"; };
 		D317E7F51A4C6BD300E05212 /* OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedDictionary.h; sourceTree = "<group>"; };
 		D33DCC691CCDA735008C5AE0 /* EncounterViewController Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "EncounterViewController Storyboard.storyboard"; sourceTree = "<group>"; };
@@ -256,7 +264,7 @@
 				D3540AA91CC6F3E200610C26 /* CoreLocation.framework in Frameworks */,
 				2412409F1B627766009E172B /* AVFoundation.framework in Frameworks */,
 				D3A869511A32B3D400D1963F /* CoreData.framework in Frameworks */,
-				65BE2B3E2C5F8BE1FB7090C2 /* libPods.a in Frameworks */,
+				CC9BBCC6FF8B5F345A003726 /* libPods-OpenMRS-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +272,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4174AE2BE8FBC50324B37910 /* libPods-OpenMRS-iOS-OpenMRS-iOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +587,9 @@
 				2412409E1B627766009E172B /* AVFoundation.framework */,
 				D3A869501A32B3D400D1963F /* CoreData.framework */,
 				87CFC2F5FC6F1445E8327AF6 /* libPods.a */,
+				8942327AC6D369708D6965AA /* libPods-OpenMRS-iOS.a */,
+				5A299C13C49FCBC0FC665623 /* libPods-OpenMRS-iOSTests.a */,
+				2734B0B65E9C342F9A66D272 /* libPods-OpenMRS-iOS-OpenMRS-iOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -673,6 +685,10 @@
 			children = (
 				AFA25E06F401CA7D732F7C67 /* Pods.debug.xcconfig */,
 				D21FB0B4A47906E6EF7F24EA /* Pods.release.xcconfig */,
+				5AB34D97199C17C085EAFAEE /* Pods-OpenMRS-iOS.debug.xcconfig */,
+				6ADAFB11AB51B0E4D4DF142D /* Pods-OpenMRS-iOS.release.xcconfig */,
+				038921AB29467A8F73391717 /* Pods-OpenMRS-iOS-OpenMRS-iOSTests.debug.xcconfig */,
+				3DABD9AC0AF325FC34EE4F64 /* Pods-OpenMRS-iOS-OpenMRS-iOSTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -684,12 +700,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D397398E1A2E082300D0AB69 /* Build configuration list for PBXNativeTarget "OpenMRS-iOS" */;
 			buildPhases = (
-				F7E9A591F9F917167E372116 /* Check Pods Manifest.lock */,
+				F7E9A591F9F917167E372116 /* [CP] Check Pods Manifest.lock */,
 				D39739671A2E082200D0AB69 /* Sources */,
 				D39739681A2E082200D0AB69 /* Frameworks */,
 				D39739691A2E082200D0AB69 /* Resources */,
-				4B447D2D789118A659448643 /* Copy Pods Resources */,
-				72EA3C75ED4BFCE100895A38 /* Embed Pods Frameworks */,
+				4B447D2D789118A659448643 /* [CP] Copy Pods Resources */,
+				72EA3C75ED4BFCE100895A38 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -704,9 +720,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D39739911A2E082300D0AB69 /* Build configuration list for PBXNativeTarget "OpenMRS-iOSTests" */;
 			buildPhases = (
+				12A5E2BAD3FA693C85C57A6E /* [CP] Check Pods Manifest.lock */,
 				D39739801A2E082300D0AB69 /* Sources */,
 				D39739811A2E082300D0AB69 /* Frameworks */,
 				D39739821A2E082300D0AB69 /* Resources */,
+				1D83D173CDE1816DD352997D /* [CP] Embed Pods Frameworks */,
+				955FC54EE74D420F054BD85D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -725,16 +744,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Erway Software";
 				TargetAttributes = {
 					D397396A1A2E082200D0AB69 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = VRGDQ857JW;
+						LastSwiftMigration = 0920;
 					};
 					D39739831A2E082300D0AB69 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = VRGDQ857JW;
+						LastSwiftMigration = 0830;
 						TestTargetID = D397396A1A2E082200D0AB69;
 					};
 				};
@@ -794,49 +815,124 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4B447D2D789118A659448643 /* Copy Pods Resources */ = {
+		12A5E2BAD3FA693C85C57A6E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenMRS-iOS-OpenMRS-iOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		72EA3C75ED4BFCE100895A38 /* Embed Pods Frameworks */ = {
+		1D83D173CDE1816DD352997D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OpenMRS-iOS-OpenMRS-iOSTests/Pods-OpenMRS-iOS-OpenMRS-iOSTests-frameworks.sh",
+				"${PODS_ROOT}/Instabug/Instabug.framework",
+				"${PODS_ROOT}/Instabug/Instabug.framework.dSYM",
+				"${PODS_ROOT}/Instabug/InstabugCore.framework",
+				"${PODS_ROOT}/Instabug/InstabugCore.framework.dSYM",
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instabug.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Instabug.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InstabugCore.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/InstabugCore.framework.dSYM",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenMRS-iOS-OpenMRS-iOSTests/Pods-OpenMRS-iOS-OpenMRS-iOSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F7E9A591F9F917167E372116 /* Check Pods Manifest.lock */ = {
+		4B447D2D789118A659448643 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OpenMRS-iOS/Pods-OpenMRS-iOS-resources.sh",
+				"${PODS_ROOT}/XLForm/XLForm/XLForm.bundle",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenMRS-iOS/Pods-OpenMRS-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72EA3C75ED4BFCE100895A38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OpenMRS-iOS/Pods-OpenMRS-iOS-frameworks.sh",
+				"${PODS_ROOT}/Instabug/Instabug.framework",
+				"${PODS_ROOT}/Instabug/Instabug.framework.dSYM",
+				"${PODS_ROOT}/Instabug/InstabugCore.framework",
+				"${PODS_ROOT}/Instabug/InstabugCore.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Instabug.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Instabug.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InstabugCore.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/InstabugCore.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenMRS-iOS/Pods-OpenMRS-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		955FC54EE74D420F054BD85D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OpenMRS-iOS-OpenMRS-iOSTests/Pods-OpenMRS-iOS-OpenMRS-iOSTests-resources.sh",
+				"${PODS_ROOT}/XLForm/XLForm/XLForm.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenMRS-iOS-OpenMRS-iOSTests/Pods-OpenMRS-iOS-OpenMRS-iOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7E9A591F9F917167E372116 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenMRS-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -953,17 +1049,26 @@
 			baseConfigurationReference = AFA25E06F401CA7D732F7C67 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iOS Development: Paul Erway (EQ5J258XZL)";
@@ -975,6 +1080,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -992,6 +1098,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "39a09aa3-a79b-4a26-b7bd-44752931946a";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -999,17 +1106,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Paul Erway (VRGDQ857JW)";
@@ -1020,6 +1136,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1028,9 +1145,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				PROVISIONING_PROFILE = "39a09aa3-a79b-4a26-b7bd-44752931946a";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
@@ -1050,6 +1170,8 @@
 				PROVISIONING_PROFILE = "8f791365-5e9a-4e00-b0e2-ae2fd5344f76";
 				SWIFT_OBJC_BRIDGING_HEADER = "OpenMRS-iOS/OpenMRS-iOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1069,12 +1191,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "8f791365-5e9a-4e00-b0e2-ae2fd5344f76";
 				SWIFT_OBJC_BRIDGING_HEADER = "OpenMRS-iOS/OpenMRS-iOS-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		D39739921A2E082300D0AB69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 038921AB29467A8F73391717 /* Pods-OpenMRS-iOS-OpenMRS-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1092,13 +1217,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.erwaysoftware.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenMRS-iOS.app/OpenMRS-iOS";
 			};
 			name = Debug;
 		};
 		D39739931A2E082300D0AB69 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D21FB0B4A47906E6EF7F24EA /* Pods.release.xcconfig */;
+			baseConfigurationReference = 3DABD9AC0AF325FC34EE4F64 /* Pods-OpenMRS-iOS-OpenMRS-iOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1112,6 +1238,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.erwaysoftware.test.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenMRS-iOS.app/OpenMRS-iOS";
 			};
 			name = Release;

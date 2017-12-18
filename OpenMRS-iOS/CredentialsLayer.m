@@ -33,7 +33,7 @@
     static CredentialsLayer *_sharedManager = nil;
     dispatch_once(&pred, ^ { _sharedManager = [[self alloc] initWithBaseURL:[NSURL URLWithString:host]]; });
     if (![[_sharedManager.baseURL.absoluteString stringByReplacingOccurrencesOfString:@"/" withString:@""] isEqual:[[NSURL URLWithString:host].absoluteString stringByReplacingOccurrencesOfString:@"/" withString:@""]]) {
-        NSLog(@"%@", _sharedManager.baseURL.absoluteString);
+        NSLog(@"######### baseURL.absoluteString [%@]", _sharedManager.baseURL.absoluteString);
         _sharedManager = [[self alloc] initWithBaseURL:[NSURL URLWithString:host]];
     }
     _sharedManager.requestSerializer.timeoutInterval = 10;
