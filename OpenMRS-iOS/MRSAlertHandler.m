@@ -11,8 +11,10 @@
 @implementation MRSAlertHandler
 
 + (UIAlertView *)alertViewForError:(id)sender error:(NSError *) error {
-    NSLog(@"error: %@", error);
-    NSLog(@"error userinfo(%ld): %@", (long)error.code,error.userInfo);
+//    NSLog(@"error: %@", error);
+    NSLog(@"error:");
+    NSLog(@"error.code: (%ld)", (long)error.code);
+//    NSLog(@"error userinfo(%ld): %@", (long)error.code,error.userInfo);
     if (error.code == errNoInternet || error.code == errNetWorkLost || error.code == errNetworkDown || error.code == errCanNotConnect) {
         return [MRSAlertHandler alertForNoInternet:sender];
     } else if (error.code == errBadRequest) {
@@ -50,8 +52,14 @@
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[error.userInfo valueForKey:@"com.alamofire.serialization.response.error.data"]
                                                          options:NSJSONReadingMutableContainers
                                                            error:nil];
-    NSLog(@"json: %@", [[NSString alloc] initWithData:[error.userInfo valueForKey:@"com.alamofire.serialization.response.error.data"] encoding:NSUTF8StringEncoding]);
-    NSLog(@"json message: %@", json);
+//    NSLog(@"json: %@", [[NSString alloc] initWithData:[error.userInfo valueForKey:@"com.alamofire.serialization.response.error.data"] encoding:NSUTF8StringEncoding]);
+        NSLog(@"alertViewForErrorBadRequest: json message:");
+    //    NSLog(@"json message: %@", json);
+//    NSDictionary *jsonerror =[NSJSONSerialization JSONObjectWithData:[json valueForKey:@"error"]
+//                                                         options:NSJSONReadingMutableContainers
+//                                                           error:nil];
+    NSLog(@"json.error.code: %@", json[@"error"][@"code"]);
+    NSLog(@"json.error.message: %@", json[@"error"][@"message"]);
     if (!json) {
         return [MRSAlertHandler alertForNotRecoginzedError:sender];
     }

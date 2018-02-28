@@ -35,7 +35,7 @@ class LoginViewController : UIViewController, UITableViewDelegate, UITableViewDa
 
 
     @IBAction func useDemoServer(_ sender: UIButton) {
-        self.hostField.text = "http://demo.openmrs.org/openmrs"
+        self.hostField.text = "http://localhost:8081/openmrs-standalone"
         self.updateHost(self.hostField)
 
         self.usernameField.text = "admin"

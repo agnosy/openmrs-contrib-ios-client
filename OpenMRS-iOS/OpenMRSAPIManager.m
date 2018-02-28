@@ -37,15 +37,20 @@
 + (void)verifyCredentialsWithUsername:(NSString *)username password:(NSString *)password host:(NSString *)host completion:(void (^)(NSError *error))completion
 {
     NSURL *hostUrl = [NSURL URLWithString:host];
+    NSLog(@"verifyCredentialsWithUsername:%@ password:%@ host:%@", username, password, host);
+    NSLog(@"hostUrl.host:[%@]", hostUrl.host);
+    NSLog(@"GET %@", [NSString stringWithFormat:@"%@/ws/rest/v1/user", host]);
     [[CredentialsLayer sharedManagerWithHost:hostUrl.host] setUsername:username andPassword:password];
+    CredentialsLayer *sharedManager = [CredentialsLayer sharedManagerWithHost:hostUrl.host];
+    NSLog(@"sharedManager.requestSerializer.HTTPRequestHeaders: [%@]", sharedManager.requestSerializer.HTTPRequestHeaders);
     [[CredentialsLayer sharedManagerWithHost:hostUrl.host] GET:[NSString stringWithFormat:@"%@/ws/rest/v1/user", host] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         completion(nil);
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Couldn't verify creds: %@", error);
+//        NSLog(@"Couldn't verify creds: %@", error);
+        NSLog(@"Couldn't verify creds:");
         completion(error);
     }];
-    completion(nil);
 }
 
 + (NSURL *)setUpCredentialsLayer {
@@ -126,6 +131,7 @@
         MRSPerson *createdPerson = [[MRSPerson alloc] init];
         createdPerson.UUID = results[@"uuid"];
         NSLog(@"Created patient: %@", results);
+        NSLog(@"createdPerson: %@", createdPerson);
         completion(nil, createdPerson);
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -231,7 +237,8 @@
             NSError *error;
             NSArray *results = [appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error];
             if (error) {
-                NSLog(@"error: %@", error);
+                //    NSLog(@"error: %@", error);
+                NSLog(@"error:");
             }
             if (results.count > 0) {
                 NSMutableArray *obs = [[NSMutableArray alloc] init];
@@ -276,7 +283,8 @@
             NSError *error;
             NSArray *results = [appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error];
             if (error) {
-                NSLog(@"error: %@", error);
+                //    NSLog(@"error: %@", error);
+                NSLog(@"error:");
             }
             if (results.count > 0) {
                 NSMutableArray *encounters = [[NSMutableArray alloc] init];
@@ -388,7 +396,8 @@
             NSError *error;
             NSArray *results = [appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error];
             if (error) {
-                NSLog(@"error: %@", error);
+                //    NSLog(@"error: %@", error);
+                NSLog(@"error:");
             }
             if (results.count > 0) {
                 NSMutableArray *visits = [[NSMutableArray alloc] init];
@@ -550,7 +559,8 @@
         }
         NSError *error;
         NSArray *results = [appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-        NSLog(@"error: %@", error);
+        //    NSLog(@"error: %@", error);
+        NSLog(@"error:");
         if (results.count > 0) {
             NSMutableArray *patients = [[NSMutableArray alloc] init];
             for (NSManagedObject *object in results) {
