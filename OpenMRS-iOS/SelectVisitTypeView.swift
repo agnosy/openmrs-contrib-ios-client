@@ -10,7 +10,7 @@ import UIKit
 
 protocol SelectVisitTypeViewDelegate
 {
-    func didSelectVisitType(type: MRSVisitType)
+    func didSelectVisitType(_ type: MRSVisitType)
 }
 
 class SelectVisitTypeView : UITableViewController, UIViewControllerRestoration
@@ -21,30 +21,30 @@ class SelectVisitTypeView : UITableViewController, UIViewControllerRestoration
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     override init(style: UITableViewStyle) {
-        super.init(style: .Plain)
+        super.init(style: .plain)
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        MRSHelperFunctions.updateTableViewForDynamicTypeSize(self.tableView)
+        MRSHelperFunctions.updateTableView(forDynamicTypeSize: self.tableView)
     }
 
     func updateFontSize() {
-        MRSHelperFunctions.updateTableViewForDynamicTypeSize(self.tableView)
+        MRSHelperFunctions.updateTableView(forDynamicTypeSize: self.tableView)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.restorationIdentifier = NSStringFromClass(self.dynamicType);
-        self.restorationClass = self.dynamicType;
+        self.restorationIdentifier = NSStringFromClass(type(of: self));
+        self.restorationClass = type(of: self);
 
-        let defaultCenter = NSNotificationCenter.defaultCenter()
-        defaultCenter.addObserver(self, selector:#selector(SelectVisitTypeView.updateFontSize), name: UIContentSizeCategoryDidChangeNotification, object: nil)
-        MRSHelperFunctions.updateTableViewForDynamicTypeSize(self.tableView)
+        let defaultCenter = NotificationCenter.default
+        defaultCenter.addObserver(self, selector:#selector(SelectVisitTypeView.updateFontSize), name: NSNotification.Name.UIContentSizeCategoryDidChange, object: nil)
+        MRSHelperFunctions.updateTableView(forDynamicTypeSize: self.tableView)
 
         self.title = NSLocalizedString("Visit Type", comment: "Label -visit- -type-")
 
@@ -54,9 +54,9 @@ class SelectVisitTypeView : UITableViewController, UIViewControllerRestoration
     {
         if self.visitTypes == nil
         {
-            MBProgressExtension.showBlockWithTitle(NSLocalizedString("Loading", comment: "Label loading"), inView: self.view)
-            OpenMRSAPIManager.getVisitTypesWithCompletion { (error:NSError!, types:[AnyObject]!) -> Void in
-                MBProgressExtension.hideActivityIndicatorInView(self.view)
+            MBProgressExtension.showBlock(withTitle: NSLocalizedString("Loading", comment: "Label loading"), in: self.view)
+            OpenMRSAPIManager.getVisitTypes { (error:NSError!, types:[AnyObject]!) -> Void in
+                MBProgressExtension.hideActivityIndicator(in: self.view)
                 if error != nil
                 {
                     MRSAlertHandler.alertViewForError(self, error: error).show();
@@ -64,9 +64,9 @@ class SelectVisitTypeView : UITableViewController, UIViewControllerRestoration
                 }
                 else
                 {
-                    MBProgressExtension.showSucessWithTitle(NSLocalizedString("Completed", comment: "Label completed"), inView: self.view)
+                    MBProgressExtension.showSucess(withTitle: NSLocalizedString("Completed", comment: "Label completed"), in: self.view)
                     self.visitTypes = types as! [MRSVisitType]
-                    dispatch_async(dispatch_get_main_queue()) {
+                    DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
                 }
@@ -74,18 +74,18 @@ class SelectVisitTypeView : UITableViewController, UIViewControllerRestoration
         }
     }
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.visitTypes.count
     }
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier("cell")
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "cell")
 
         if cell == nil
         {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: "cell")
+            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         }
 
         let visitType = self.visitTypes[indexPath.row]
@@ -94,21 +94,21 @@ class SelectVisitTypeView : UITableViewController, UIViewControllerRestoration
 
         return cell
     }
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let visitType = visitTypes[indexPath.row]
         delegate.didSelectVisitType(visitType)
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
-    override func encodeRestorableStateWithCoder(coder: NSCoder) {
-        coder.encodeObject(self.delegate as! StartVisitViewController, forKey: "delegate")
-        coder.encodeObject(self.visitTypes, forKey: "visitTypes")
+    override func encodeRestorableState(with coder: NSCoder) {
+        coder.encode(self.delegate as! StartVisitViewController, forKey: "delegate")
+        coder.encode(self.visitTypes, forKey: "visitTypes")
     }
 
-    static func viewControllerWithRestorationIdentifierPath(identifierComponents: [AnyObject], coder: NSCoder) -> UIViewController? {
-        let visitTypeList = SelectVisitTypeView(style: UITableViewStyle.Plain)
-        visitTypeList.visitTypes = coder.decodeObjectForKey("visitTypes") as! [MRSVisitType]
-        visitTypeList.delegate = coder.decodeObjectForKey("delegate") as! StartVisitViewController
+    static func viewController(withRestorationIdentifierPath identifierComponents: [Any], coder: NSCoder) -> UIViewController? {
+        let visitTypeList = SelectVisitTypeView(style: UITableViewStyle.plain)
+        visitTypeList.visitTypes = coder.decodeObject(forKey: "visitTypes") as! [MRSVisitType]
+        visitTypeList.delegate = coder.decodeObject(forKey: "delegate") as! StartVisitViewController
         return visitTypeList
     }
 }

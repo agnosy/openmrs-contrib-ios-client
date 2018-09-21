@@ -22,15 +22,15 @@ class AddressMapCell : UITableViewCell
 
     init(location: CLLocationCoordinate2D, reuseIdentifier: String)
     {
-        super.init(style: .Default, reuseIdentifier: reuseIdentifier)
+        super.init(style: .default, reuseIdentifier: reuseIdentifier)
 
         self.location = location
 
         mapView = MKMapView(frame: self.bounds)
         mapView.translatesAutoresizingMaskIntoConstraints = false
-        mapView.zoomEnabled = false
-        mapView.scrollEnabled = false
-        mapView.userInteractionEnabled = false
+        mapView.isZoomEnabled = false
+        mapView.isScrollEnabled = false
+        mapView.isUserInteractionEnabled = false
 
         self.contentView.addSubview(mapView)
 
@@ -41,7 +41,7 @@ class AddressMapCell : UITableViewCell
         let annotation = PatientAddressAnnotation(coordinate: location, title: "", subtitle: "")
         mapView.addAnnotation(annotation)
 
-        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[subview]-0-|", options: .DirectionLeadingToTrailing, metrics: nil, views: ["subview" : mapView]))
-        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[subview]-0-|", options: .DirectionLeadingToTrailing, metrics: nil, views: ["subview" : mapView]))
+        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["subview" : mapView]))
+        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["subview" : mapView]))
     }
 }
